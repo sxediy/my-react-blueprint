@@ -1,20 +1,20 @@
 const faker = require('faker');
 
-function generateEmployees() {
-  const employees = [];
+function generateGeo() {
+  const fakeData = [];
   /* eslint-disable */
   for (let id = 0; id < 50; id++) {
   /* eslint-enable */
-    const firstName = faker.name.firstName();
-    const lastName = faker.name.lastName();
-    const email = faker.internet.email();
-    employees.push({
+    const country = faker.address.country();
+    const city = faker.address.city();
+    const companyName = faker.company.companyName();
+    fakeData.push({
       id,
-      firstName,
-      lastName,
-      email
+      country,
+      city,
+      companyName
     });
   }
-  return { employees };
+  return { fakeData };
 }
-module.exports = generateEmployees;
+module.exports = generateGeo;

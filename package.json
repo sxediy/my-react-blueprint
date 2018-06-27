@@ -12,8 +12,8 @@
     "dev": "webpack --mode development",
     "prod": "webpack --mode production",
     "lint": "eslint src --cache --ext .js --color --format codeframe",
-    "server": "json-server --watch server/faker.generate.db.js",
-    "server2": "nodemon -e json server/server.config.js "
+    "server": "nodemon -e json server/server.config.js ",
+    "server2": "json-server --watch server/faker.generate.db.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
