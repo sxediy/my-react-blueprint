@@ -12,7 +12,7 @@ class Profile extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='profile'>
         <div className='header profile'>
           <h3>Profile</h3>
         </div>
