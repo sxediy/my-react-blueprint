@@ -62,10 +62,10 @@ class Login extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => (
+const mapStateToProps = ({ auth }) => (
   {
-    isAuthorized: Boolean(state.username),
-    error: state.errorMessage
+    isAuthorized: Boolean(auth.username),
+    error: auth.errorMessage
   }
 );
 

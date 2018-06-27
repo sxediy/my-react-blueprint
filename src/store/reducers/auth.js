@@ -1,4 +1,4 @@
-import { AUTHORIZATION_SUCCESS, AUTHORIZATION_FAIL, SIGN_OUT } from './actionTypes';
+import { AUTHORIZATION_SUCCESS, AUTHORIZATION_FAIL, SIGN_OUT } from '../actionTypes';
 
 const auth = (state = false, action) => {
   switch (action.type) {

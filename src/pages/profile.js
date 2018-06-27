@@ -31,9 +31,9 @@ class Profile extends React.Component {
   };
 }
 
-const mapStateToProps = (state) => (
+const mapStateToProps = ({ auth }) => (
   {
-    username: state.username
+    username: auth.username
   }
 );
 

@@ -1,6 +1,6 @@
 import { applyMiddleware, createStore, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import reducers from './reducers';
+import rootreducer from './reducers';
 import sagas from './sagas';
 import { loadState, saveState } from './localStorage';
 
@@ -12,13 +12,13 @@ const createStoreWithMiddleware = compose(
   applyMiddleware(sagaMiddleware)
 )(createStore);
 
-const store = createStoreWithMiddleware(reducers, initialState,
+const store = createStoreWithMiddleware(rootreducer, initialState,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 store.subscribe(() => {
   saveState({
-    username: store.getState().username
+    username: store.getState().auth.username
   });
 });
 
