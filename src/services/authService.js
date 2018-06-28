@@ -6,7 +6,7 @@ export const logIn = (username, password) => {
 
   return new Promise((resolve, reject) => {
     API.get(`auth?username=${username}`)
-      .catch(() => reject(new Error('Oops, there seems to be a problem with the network connection')))
+      .catch(() => reject(new Error('Oops, there seems to be a problem with the network connection. Run *npm run server* in a CLI')))
       .then(({ data }) => data[0])
       .then(({ username: user, password: pass }) => user === username && pass === password)
       .catch(() => reject(new Error('Incorrect username')))
