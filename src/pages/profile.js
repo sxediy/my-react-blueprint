@@ -14,9 +14,6 @@ class Profile extends React.Component {
   render() {
     return (
       <div className='profile'>
-        <div className='header profile'>
-          <h2>Profile</h2>
-        </div>
         <div className='profile-info'>
           <div className='group'>
             <h3>{this.props.username}</h3>
