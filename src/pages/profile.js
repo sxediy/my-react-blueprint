@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Button } from 'antd';
 import { SIGN_OUT } from '../store/actionTypes';
 
 
@@ -14,13 +15,19 @@ class Profile extends React.Component {
     return (
       <div className='profile'>
         <div className='header profile'>
-          <h3>Profile</h3>
+          <h2>Profile</h2>
         </div>
         <div className='profile-info'>
           <div className='group'>
-            <span>{this.props.username}</span>
+            <h3>{this.props.username}</h3>
           </div>
-          <button onClick={this.signOut}>Sign out</button>
+          <Button
+            type="danger"
+            className="button"
+            onClick={this.signOut}
+          >
+          Sign out
+          </Button>
         </div>
       </div>
     );

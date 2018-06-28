@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => (
   <React.Fragment>
-    <h3>Internet of Things</h3>
+    <h2>Internet of Things</h2>
   </React.Fragment>
 );
 

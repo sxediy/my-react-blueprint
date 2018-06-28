@@ -22,7 +22,7 @@ class News extends React.Component {
     return (
       <div>
         <div className='news header'>
-          <h3>National Geographic News</h3>
+          <h2>National Geographic News</h2>
         </div>
         { this.state.articles.map((article, index) =>
           <ArticleNews key={index}
