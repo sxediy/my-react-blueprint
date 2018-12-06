@@ -36,7 +36,8 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    hot: true
+    hot: true,
+    overlay: true,
   },
   plugins: [
     new ExtractTextPlugin({ filename: 'style.css' }),
