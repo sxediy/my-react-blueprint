@@ -27,6 +27,7 @@ class NormalLoginForm extends React.Component {
   };
   render() {
     const { isAuthorized } = this.props;
+    console.log('isAuthorized in login.js', isAuthorized);
 
     if (isAuthorized) {
       return <Redirect to='/' />;

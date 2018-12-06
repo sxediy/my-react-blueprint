@@ -9,13 +9,15 @@ export const routes = [
     isExact: true,
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    isPrivate: true,
   },
   {
     isNavBar: true,
     path: '/news',
     name: 'News',
-    component: News
+    component: News,
+    isPrivate: false,
   },
   {
     isNavBar: true,
@@ -27,6 +29,7 @@ export const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: Login
+    component: Login,
+    isPrivate: false,
   }
 ];
