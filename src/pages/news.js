@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import ArticleNews from '../components/articleNews';
+import ArticleNews from '../components/news/articleNews';
 
 
 class News extends React.Component {
