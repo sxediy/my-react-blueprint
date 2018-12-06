@@ -1,7 +1,11 @@
 const path = require('path');
+const fs = require('fs');
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const lessToJs = require('less-vars-to-js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const themeVariables = lessToJs(fs.readFileSync(path.join(__dirname, './src/ant-theme.less'), 'utf8'));
 
 module.exports = {
   target: 'web',
@@ -24,7 +28,16 @@ module.exports = {
         test: /\.less$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader', 'less-loader'],
+          use: [
+            'css-loader',
+            'less-loader',
+            {
+              loader: 'less-loader',
+              options: {
+                modifyVars: themeVariables
+              }
+            }
+          ],
         }),
       },
       {

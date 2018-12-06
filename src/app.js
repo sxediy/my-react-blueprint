@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import { routes } from './routes';
 import NavigationBar from './components/navigationBar';
 import Authorization from './hoc/authorization';
@@ -18,6 +18,7 @@ const App = () => {
           />
         );
       })}
+      <Redirect from='*' to='/news' />
     </Switch>
   );
 
