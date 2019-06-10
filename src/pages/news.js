@@ -20,7 +20,7 @@ class News extends React.Component {
         <div className='news header'>
           <h2>National Geographic News</h2>
         </div>
-        { this.state.articles.map((article, index) =>
+        { this.state.articles.map((article, index) => (
           <ArticleNews key={index}
             title={article.title}
             description={article.description}
@@ -28,7 +28,7 @@ class News extends React.Component {
             author={article.author}
             urlToImage={article.urlToImage}
           />
-        )}
+        ))}
       </div>
     );
   }

@@ -8,10 +8,10 @@ const ArticleNews = (props) => {
 
   return (
     <article>
-      { urlToImage &&
+      { urlToImage ? (
         <div className='img-wrap'>
           <img align='left' src={urlToImage}/>
-        </div>
+        </div>) : null
       }
       <div>
         <div className='title'>

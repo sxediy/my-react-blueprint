@@ -3,7 +3,12 @@ import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
-import { Form, Icon, Input, Button } from 'antd';
+import {
+  Form,
+  Icon,
+  Input,
+  Button
+} from 'antd';
 
 const FormItem = Form.Item;
 
@@ -25,6 +30,7 @@ class NormalLoginForm extends React.Component {
       }
     });
   };
+
   render() {
     const { isAuthorized } = this.props;
     console.log('isAuthorized in login.js', isAuthorized);
